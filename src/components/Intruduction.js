@@ -1,10 +1,13 @@
+'use client'
 import Image from 'next/image'
 import maskPic from '@/assets/image/Mask.png'
 import appButtonPic from '@/assets/image/App_button.png'
 import borderTLPic from '@/assets/image/border_tl.png'
 import Link from 'next/link'
+import { useToast } from '@chakra-ui/react'
 
 export default function Introduction() {
+	const toast = useToast()
 	return (
 		<div className="relative mr-[3.125vw] ml-[3.125vw] w-[93.75vw] h-[37.5vw] mt-[40px]">
 			<div className='absolute left-0 top-0 h-[18.8vw] w-[65.8vw] z-10 bg-white rounded-br-3xl'>
@@ -25,7 +28,19 @@ export default function Introduction() {
 						<div className='absolute bottom-[-24px] left-0'>
 							<Image src={borderTLPic} />
 						</div>
-						<div className='relative w-[11.875vw] h-[2.43vw] cursor-pointer'>
+						<div
+							className='relative w-[11.875vw] h-[2.43vw] cursor-pointer'
+							onClick={() =>
+								toast({
+									title: 'Coming soon.',
+									// description: "We've created your account for you.",
+									status: 'warning',
+									duration: 1500,
+									isClosable: true,
+									position: 'top'
+								})
+							} 
+						>
 							<Image
 								src={appButtonPic}
 								alt="App"

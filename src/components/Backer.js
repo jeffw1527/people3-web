@@ -36,7 +36,7 @@ const contentList = [
 ]
 export default function DataCuration() {
 	return (
-		<div className="relative  mt-[12.5vw] ml-[3.125vw] mr-[3.125vw] w-[93.75vw] flex flex-col justify-center items-center">
+		<div className="relative ml-[3.125vw] mr-[3.125vw] w-[93.75vw] flex flex-col justify-center items-center">
 			<div className='font-sans font-semibold text-[4.75vw] leading-none'>
 				Backers
 			</div>

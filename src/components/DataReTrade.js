@@ -10,7 +10,13 @@ import dataLabel4Pic from '@/assets/image/data_retrade4.svg'
 import logoPic from '@/assets/image/logo.svg'
 import { useState, useEffect, useRef } from 'react'
 import { ReactSVG } from 'react-svg';
-
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
+const sceneValueList = [
+	347,
+	160,
+	237,
+	229
+]
 const picMap = {
 	dataLabel1Pic,
 	dataLabel2Pic,
@@ -30,6 +36,7 @@ const contentList = [
 	'Enables effective tagging and categorization of data, facilitating easier retrieval and more structured training processes.',
 ]
 export default function DataReTrade() {
+	const frameValueRef = useRef(0)
 	const indexRef = useRef(0)
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const valueRef = useRef(0)
@@ -37,17 +44,30 @@ export default function DataReTrade() {
 	useEffect(() => {
 		const intervalId = setInterval(() => {
 			valueRef.current = valueRef.current + 1
+			frameValueRef.current += 1
+			valueRef.current = Math.ceil(frameValueRef.current/sceneValueList[indexRef.current] * 100)
 			if (valueRef.current > 100) {
+				frameValueRef.current = 0
 				valueRef.current = 0
 				indexRef.current = (indexRef.current + 1) % 4
 				setCurrentIndex(indexRef.current)
 			}
 			setCurrentValue(valueRef.current)
-		}, 50)
+		}, 20)
 		return () => clearInterval(intervalId);
 	}, [])
 	return (
 		<div className="relative  mt-[12.5vw] ml-[3.125vw] mr-[3.125vw] w-[93.75vw] h-[37.5vw]">
+			<div className='z-20 absolute left-[0.3vw] bottom-[-4.8vw]'>
+				<Player
+					autoplay
+					loop
+					src="/data3.json"
+					style={{ height: '40.6vw', width: '38.8vw' }}
+				>
+						{/* <Controls visible={true} buttons={['play', 'repeat', 'frame', 'debug']} /> */}
+				</Player>
+			</div>
 			<div className='absolute top-[1.25vw] left-[1.875vw] w-[43.75vw] font-sans font-semibold text-[4.75vw] leading-[4.275vw]'>
 				Data Anonymization and Re-Trade
 			</div>

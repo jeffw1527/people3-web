@@ -21,13 +21,18 @@ export default function Home() {
       <div className="absolute top-[3.75vw] left-0">
         <Intruduction/>
         <ProductList/>
+        <div  id="customers" className="w-full h-[12.5vw]"></div>
         <Company/>
+        <div id="products" className="w-full h-[10.625vw]"></div>
         <DataLabel/>
         <RLHF/>
         <DataCuration/>
         <DataReTrade />
+        <div  id="community" className="w-full h-[10.5vw]"></div>
         <User />
+        <div id="economic" className="w-full h-[6.25vw]"></div>
         <Reputation />
+        <div id="backers" className="w-full h-[12.5vw]"></div>
         <Backer />
         <Footer />
 
