@@ -9,7 +9,13 @@ import dataLabel3Pic from '@/assets/image/data_label3.svg'
 import dataLabel4Pic from '@/assets/image/data_label4.svg'
 import { useState, useEffect, useRef } from 'react'
 import { ReactSVG } from 'react-svg';
-
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
+const sceneValueList = [
+	200,
+	150,
+	210,
+	221
+]
 const picMap = {
 	dataLabel1Pic,
 	dataLabel2Pic,
@@ -23,6 +29,7 @@ const contentList = [
 	'Collaborative Annotation Environment',
 ]
 export default function DataLabel() {
+	const frameValueRef = useRef(0)
 	const indexRef = useRef(0)
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const valueRef = useRef(0)
@@ -30,17 +37,30 @@ export default function DataLabel() {
 	useEffect(() => {
 		const intervalId = setInterval(() => {
 			valueRef.current = valueRef.current + 1
+			frameValueRef.current += 1
+			valueRef.current = Math.ceil(frameValueRef.current/sceneValueList[indexRef.current] * 100)
 			if (valueRef.current > 100) {
+				frameValueRef.current = 0
 				valueRef.current = 0
 				indexRef.current = (indexRef.current + 1) % 4
 				setCurrentIndex(indexRef.current)
 			}
 			setCurrentValue(valueRef.current)
-		}, 50)
+		}, 20)
 		return () => clearInterval(intervalId);
 	}, [])
 	return (
-		<div className="relative mt-[10.625vw] ml-[5vw] mr-[5vw] w-[90vw] h-[31.25vw]">
+		<div className="relative ml-[5vw] mr-[5vw] w-[90vw] h-[31.25vw]">
+			<div className='absolute top-0 right-0'>
+				<Player
+					autoplay
+					loop
+					src="/data1.json"
+					style={{ height: '31.6vw', width: '33.8vw' }}
+				>
+						{/* <Controls visible={true} buttons={['play', 'repeat', 'frame', 'debug']} /> */}
+				</Player>
+			</div>
 			<div className='absolute top-[5.625vw] font-sans font-semibold text-[3.75vw] leading-none'>
 				Data Labelling
 			</div>

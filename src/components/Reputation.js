@@ -31,47 +31,47 @@ const contentList = [
 ]
 export default function Reputation() {
 	return (
-		<div className="relative  mt-[6.25vw] ml-[3.125vw] mr-[3.125vw] w-[93.75vw] h-[50vw]">
-			<div className=' absolute top-0 left-0 w-[39vw] h-[46.375vw]'>
-				<div className=' relative w-full h-[38.5vw]'>
-					<div className='absolute left-[1.875vw] top-0 w-[20vw] font-sans font-semibold text-[4vw] leading-none'>
-						Reputation System
-					</div>
-					<Image
-						src={reputationLeftPic}
-						fill
-					/>
+		<div className="relative ml-[3.125vw] mr-[3.125vw] w-[93.75vw] h-[45vw] flex flex-wrap justify-between">
+			<div className='w-[70.25vw] h-[22.25vw] bg-black rounded-3xl'>
+
+			</div>
+			<div className='bg-[#A2F464] flex flex-col justify-between w-[23vw] h-[22.25vw] p-[2vw] rounded-3xl'>
+				<div className=' w-[16.8125vw] font-sans font-black text-[3vw] leading-none'>
+					Reputation System
 				</div>
-				<div className='absolute bottom-0 left-0 w-full font-display font-medium text-[1.25vw] leading-[1.625vw]'>
+				<div className='w-[19vw] h-[1px] opacity-10 bg-black'></div>
+				<div className='w-[19vw] font-display font-medium text-[1vw] leading-[1.5vw]'>
 					Implement a reputation system that rewards quality and consistency. Higher reputation scores can lead to higher rewards, access to premium projects, or greater influence in governance decisions.
 				</div>
 			</div>
-			<div className='absolute top-0 right-0 w-[53.1875vw] h-[44.875vw]'>
-				<div className='absolute top-[2vw] left-[2vw] w-[37.5vw] font-display font-semibold text-[4vw] leading-none z-10 text-white'>
+			<div className=' relative w-[23vw] h-[22.25vw]  rounded-3xl bg-[#8BC7FF]'>
+				<div className='absolute left-[2vw] bottom-[2vw] font-sans font-black text-[3vw] leading-none'>
 					Dynamic Reward Mechanism
 				</div>
-				<div className='absolute bottom-[2.25vw] left-[2vw] w-[49.1875vw] z-10'>
-					<div className='bg-white p-[1.5vw] rounded-3xl'>
-						<div className=' font-display font-extrabold text-[1.5vw] leading-[2vw]'>
+			</div>
+			<div className='w-[34.875vw] h-[22.25vw] bg-black rounded-3xl'>
+
+			</div>
+			<div className=' relative bg-[#EFEFF5] p-[2vw] w-[34.875vw] h-[22.25vw] rounded-3xl'>
+				<div className=' absolute bottom-[2vw]'>
+					<div className='w-[30.875vw]'>
+						<div className='mb-[0.5vw] w-full font-sans font-bold text-[1.5vw] leading-[1.875vw]'>
 							Quality-Based Rewards
 						</div>
-						<div className='mt-[0.4375vw] font-display font-medium text-[1.125vw] leading-[1.5vw] opacity-60'>
+						<div className='w-full font-display font-medium text-[1vw] leading-[1.5vw]'>
 							Annotators receive tokens not just for the quantity of work done but also for the quality, as assessed through peer reviews or AI validation methods.
 						</div>
 					</div>
-					<div className='bg-white p-[1.5vw] mt-[0.4375vw] rounded-3xl'>
-						<div className=' font-display font-extrabold text-[1.5vw] leading-[2vw]'>
+					<div className='w-[30.875vw] h-1px bg-black mt-[2.5vw]'></div>
+					<div className='w-[30.875vw] mt-[2.5vw]'>
+						<div className='mb-[0.5vw] w-full font-sans font-bold text-[1.5vw] leading-[1.875vw]'>
 							Task Difficulty and Urgency
 						</div>
-						<div className='mt-[0.4375vw] font-display font-medium text-[1.125vw] leading-[1.5vw] opacity-60'>
+						<div className='w-full font-display font-medium text-[1vw] leading-[1.5vw]'>
 							Higher rewards for tasks that are more complex or require a quicker turnaround, incentivizing skilled contributors to prioritize them.
 						</div>
 					</div>
 				</div>
-				<Image
-					src={reputationRightPic}
-					fill
-				/>
 			</div>
 		</div>
 	)

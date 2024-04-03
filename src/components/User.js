@@ -6,7 +6,7 @@ import { Progress } from '@chakra-ui/react'
 
 export default function DataCuration() {
 	return (
-		<div className="relative  mt-[10.5vw] w-full h-[62.5vw]">
+		<div className="relative ml-[1vw] mr-[1vw] w-[98vw] h-[43.75vw]">
 			<Image
 				src={userPic}
 				fill

@@ -6,7 +6,6 @@ import logoPic from '@/assets/image/logo.svg'
 import { ReactSVG } from 'react-svg';
 
 export default function Product(props) {
-	console.log('props: ', props);
 	const [isHover, setIsHover] = useState(false)
 	return (
 		<li 
@@ -22,7 +21,7 @@ export default function Product(props) {
 					<Image src={borderTLPic} />
 				</div>
 			</div>
-			{isHover ? <div className={`z-10 absolute top-[1.675vw] right-[1.675vw] ${props.logoColor}`}>
+			{isHover ? <div className={`z-10 absolute top-[1.675vw] right-[1.675vw] opacity-40 stroke-white fill-white`}>
 				<ReactSVG
 					src={logoPic.src}
 				/>
