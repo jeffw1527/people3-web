@@ -19,13 +19,13 @@ const picMap = {
 	dataLabel4Pic,
 }
 const titleList = [
-	'Advanced Filtering and Sorting',
+	'Incentivizing Data Uploads',
 	'Dataset Enrichment',
 	'Automated Data Cleaning',
 	'Metadata Management',
 ]
 const contentList = [
-	'Tools to efficiently organize datasets by relevance, quality, or other criteria, ensuring AI models are trained on optimal data.',
+	'Incentivizes users with tokens for uploading diversified datasets and whenever the dataset is invoked, thus creating a segmented database.',
 	'Enhances datasets by identifying and filling gaps, increasing the diversity and comprehensiveness of data available for AI training.',
 	'Automatically detects and corrects errors or inconsistencies in datasets, improving data quality with minimal human intervention.',
 	'Enables effective tagging and categorization of data, facilitating easier retrieval and more structured training processes.',
@@ -36,7 +36,7 @@ export default function DataCuration() {
 	return (
 		<div className="relative  mt-[12.5vw] ml-[3.125vw] mr-[3.125vw] w-[93.75vw]">
 			<div className='ml-[1.875vw] font-sans font-semibold text-[4.75vw] leading-none'>
-				Data Curation
+				Data Collection and Curation
 			</div>
 			<div className=' justify-center mt-[2.5vw] flex flex-wrap'>
 				{[0,1,2,3].map((i) => {

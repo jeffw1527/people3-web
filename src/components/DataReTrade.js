@@ -69,7 +69,7 @@ export default function DataReTrade() {
 				</Player>
 			</div>
 			<div className='absolute top-[1.25vw] left-[1.875vw] w-[43.75vw] font-sans font-semibold text-[4.75vw] leading-[4.275vw]'>
-				Data Anonymization and Re-Trade
+				Data Privacy & Reselling
 			</div>
 			<div className='absolute top-0 right-0 flex flex-col'>
 				{[0,1,2,3].map((i) => {

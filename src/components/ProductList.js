@@ -9,13 +9,13 @@ import  Product  from './Product'
 const titles = [
 	'Data Labelling',
 	'RLFH Feedback (RLHF)',
-	'Data Curation',
+	'Data Collection',
 	'Data Anonymization and Re-Trade'
 ]
 const contents = [
 	'At the forefront of our offerings, our platform provides comprehensive data labelling services, enabling precise annotation across a myriad of data types. With our intuitive interface and advanced toolset, we ensure the highest quality labels, empowering your AI models to learn and perform with exceptional accuracy.',
 	'Leveraging the power of human insight, our RLHF feature accelerates the refinement and effectiveness of AI algorithms. By incorporating direct feedback into the learning process, we enhance model responsiveness and adaptability, bridging the gap between AI potential and real-world application.',
-	'Our platform stands out with its robust data curation capabilities, meticulously organizing and refining datasets to meet the specific needs of your projects. We prioritize relevance and quality, ensuring your AI systems are trained on data that truly matters, driving efficiency and innovation.',
+	'Our platform motivates users by offering tokens for uploading diverse data, thus building a segmented database. What distinguishes us is the rewarding system: each time a dataset is accessed, contributors receive token incentives. This ensures ongoing participation and a comprehensive collection of varied data types',
 	'Addressing the critical need for privacy and security, we offer advanced data anonymization services, allowing for the safe re-trade of sensitive information. This feature not only protects individual privacy but also opens new avenues for data utilization, ensuring compliance and ethical use of information in AI development.'
 ]
 const colorList = [
